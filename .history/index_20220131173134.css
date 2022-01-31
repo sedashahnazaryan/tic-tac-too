@@ -1,0 +1,27 @@
+body {
+    font-family: "Arial", sans-serif;
+  }
+section{
+  text-align: center;
+
+}
+.div-contanier{
+margin-top: 10px ;
+display:grid;
+grid-template-columns:repeat (3, auto);
+width: 300px;
+margin: 50px auto;
+align-items: center;
+justify-content: center;
+
+}
+.ceil{
+    height: 200px; ;
+    width: 150px;
+    border: solid 1px rgb(0, 0, 0);
+}
+.btn restart{
+padding: ;
+
+cursor: pointer;
+}

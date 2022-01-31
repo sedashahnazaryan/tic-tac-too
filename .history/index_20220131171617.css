@@ -1,0 +1,14 @@
+section{
+  text-align: center;
+
+}
+.div-contanier{
+margin-top: 10px ;
+display:grid;
+
+}
+.ceil{
+    height: 200px; ;
+    width: ;
+    border: solid 1px rgb(0, 0, 0);
+}
