@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
    [3] [4] [5]
    [6] [7] [8]
 */
-  // հորիզոնական,ուղղահայաց,անկյունագծերով հաղթանակների նշմարումը
+  // հորիզոնական,ուղղահայաց,անկյունագծերով
   const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return true;
   };
 
-// ներկայիս խաղացողի տարրի սահմանում,թարմացում
+// ներկայիս խաղացողի տարրը կսահմանենք
   const updateBoard = (index) => {
     board[index] = currentPlayer;
   };
@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
     playerDisplay.innerText = currentPlayer;
     playerDisplay.classList.add(`player${currentPlayer}`);
   };
-// օգտատիրոջ խաղալու հնարավորությունն ենք ապահովում
+օգտատիրոջ 
   const userAction = (tile, index) => {
     if (isValidAction(tile) && isGameActive) {
       tile.innerText = currentPlayer;
@@ -103,7 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
       changePlayer();
     }
   };
-  
   const restartBoard = () => {
     board = ["", "", "", "", "", "", "", "", ""];
     isGameActive = true;
@@ -122,6 +121,5 @@ window.addEventListener("DOMContentLoaded", () => {
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });
-  // վերագործարկում ենք  կոճակի վրա կտացնելով
   restartButton.addEventListener("click", restartBoard);
 });

@@ -1,4 +1,3 @@
-// HTML ի կապումը 
 window.addEventListener("DOMContentLoaded", () => {
   const tiles = Array.from(document.querySelectorAll(".tile"));
   const playerDisplay = document.querySelector(".display-player");
@@ -18,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
    [3] [4] [5]
    [6] [7] [8]
 */
-  // հորիզոնական,ուղղահայաց,անկյունագծերով հաղթանակների նշմարումը
+  // հորիզոնական,ուղղահայաց,անկյունագծերով
   const winningConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -29,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
     [0, 4, 8],
     [2, 4, 6],
   ];
-   // խաղի կանոնները,արդյունքների գնահատում
+   // խաղի կանոնները
   function handleResultValidation() {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
@@ -38,7 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
       const b = board[winCondition[1]];
       const c = board[winCondition[2]];
       if (a === "" || b === "" || c === "") {
-        // եթե դատարկ է
         continue;
       }
     //  հաղթանակ
@@ -81,7 +79,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return true;
   };
 
-// ներկայիս խաղացողի տարրի սահմանում,թարմացում
+  
   const updateBoard = (index) => {
     board[index] = currentPlayer;
   };
@@ -93,7 +91,7 @@ window.addEventListener("DOMContentLoaded", () => {
     playerDisplay.innerText = currentPlayer;
     playerDisplay.classList.add(`player${currentPlayer}`);
   };
-// օգտատիրոջ խաղալու հնարավորությունն ենք ապահովում
+
   const userAction = (tile, index) => {
     if (isValidAction(tile) && isGameActive) {
       tile.innerText = currentPlayer;
@@ -103,7 +101,6 @@ window.addEventListener("DOMContentLoaded", () => {
       changePlayer();
     }
   };
-  
   const restartBoard = () => {
     board = ["", "", "", "", "", "", "", "", ""];
     isGameActive = true;
@@ -122,6 +119,5 @@ window.addEventListener("DOMContentLoaded", () => {
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });
-  // վերագործարկում ենք  կոճակի վրա կտացնելով
   restartButton.addEventListener("click", restartBoard);
 });

@@ -122,6 +122,6 @@ window.addEventListener("DOMContentLoaded", () => {
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });
-  // վերագործարկում ենք  կոճակի վրա կտացնելով
+  վերագոր
   restartButton.addEventListener("click", restartBoard);
 });

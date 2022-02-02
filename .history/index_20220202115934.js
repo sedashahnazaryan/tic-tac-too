@@ -113,12 +113,12 @@ window.addEventListener("DOMContentLoaded", () => {
       changePlayer();
     }
 
-    tiles.forEach((tile) => {
-      tile.innerText = "";
-      tile.classList.remove("playerX");
-      tile.classList.remove("playerO");
-    });
-  };
+  //   tiles.forEach((tile) => {
+  //     tile.innerText = "";
+  //     tile.classList.remove("playerX");
+  //     tile.classList.remove("playerO");
+  //   });
+  // };
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });

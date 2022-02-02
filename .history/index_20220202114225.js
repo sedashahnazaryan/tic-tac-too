@@ -103,7 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
       changePlayer();
     }
   };
-  
   const restartBoard = () => {
     board = ["", "", "", "", "", "", "", "", ""];
     isGameActive = true;
@@ -122,6 +121,5 @@ window.addEventListener("DOMContentLoaded", () => {
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });
-  // վերագործարկում ենք  կոճակի վրա կտացնելով
   restartButton.addEventListener("click", restartBoard);
 });

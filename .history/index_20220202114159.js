@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return true;
   };
 
-// ներկայիս խաղացողի տարրի սահմանում,թարմացում
+// ներկայիս խաղացողի տարրը կսահմանենք,
   const updateBoard = (index) => {
     board[index] = currentPlayer;
   };
@@ -103,7 +103,6 @@ window.addEventListener("DOMContentLoaded", () => {
       changePlayer();
     }
   };
-  
   const restartBoard = () => {
     board = ["", "", "", "", "", "", "", "", ""];
     isGameActive = true;
@@ -122,6 +121,5 @@ window.addEventListener("DOMContentLoaded", () => {
   tiles.forEach((tile, index) => {
     tile.addEventListener("click", () => userAction(tile, index));
   });
-  // վերագործարկում ենք  կոճակի վրա կտացնելով
   restartButton.addEventListener("click", restartBoard);
 });
